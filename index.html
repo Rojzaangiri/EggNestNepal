@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunnySide Egg Farm - Premium Egg Production</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@sunnysidefarm.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-end">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="SunnySide Egg Farm" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#our-story">Our Story</a></li>
+                            <li><a class="dropdown-item" href="#our-farm">Our Farm</a></li>
+                            <li><a class="dropdown-item" href="#team">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#organic-eggs">Organic Eggs</a></li>
+                            <li><a class="dropdown-item" href="#free-range">Free-Range Eggs</a></li>
+                            <li><a class="dropdown-item" href="#specialty-eggs">Specialty Eggs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#statistics">Statistics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="#bulk-order" class="btn btn-light ms-3">Bulk Order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">About Us</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-history fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title">Our Story</h3>
+                            <p class="card-text">
+                                Founded in 2008, SunnySide Egg Farm has been dedicated to providing the finest quality eggs through sustainable and ethical farming practices. Our journey began with a small flock and has grown into a leading egg producer in the region.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tractor fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title">Our Farm</h3>
+                            <p class="card-text">
+                                Located on 100 acres of pristine land, our farm features state-of-the-art facilities and sustainable practices. We prioritize hen welfare and environmental responsibility in everything we do.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <h3 class="card-title">Our Team</h3>
+                            <p class="card-text">
+                                Our dedicated team of farmers, veterinarians, and quality control experts work together to ensure the highest standards of animal welfare and egg quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h3>Our Mission</h3>
+                    <p class="lead">
+                        To provide the healthiest, most nutritious eggs while maintaining the highest standards of animal welfare and environmental responsibility.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-primary me-2"></i>100% Certified Organic</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Free-Range Environment</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Animal Welfare Certified</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Environmentally Sustainable</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="farm-video.jpg" class="card-img-top" alt="Farm Video">
+                        <div class="card-body">
+                            <h5 class="card-title">Take a Virtual Tour</h5>
+                            <p class="card-text">
+                                Experience our farm through our virtual tour video. See how we care for our hens and maintain our high standards of quality.
+                            </p>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-play me-2"></i>Watch Video
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Products</h2>
+            
+            <div class="filters mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <select class="form-select" id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="organic">Organic Eggs</option>
+                            <option value="free-range">Free-Range Eggs</option>
+                            <option value="specialty">Specialty Eggs</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <select class="form-select" id="sizeFilter">
+                            <option value="all">All Sizes</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <select class="form-select" id="priceFilter">
+                            <option value="all">All Prices</option>
+                            <option value="low">Under $5</option>
+                            <option value="medium">$5 - $10</option>
+                            <option value="high">Over $10</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="productsGrid">
+                <!-- Organic Eggs -->
+                <div class="col-lg-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="organic-eggs.jpg" alt="Organic Eggs" class="img-fluid">
+                            <span class="badge bg-success">Organic</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Premium Organic Eggs</h3>
+                            <div class="product-meta">
+                                <span class="product-size">Large</span>
+                                <span class="product-price">$6.99/dozen</span>
+                            </div>
+                            <p class="product-description">
+                                Our premium organic eggs come from hens fed a certified organic diet and raised in a free-range environment.
+                            </p>
+                            <div class="product-features">
+                                <i class="fas fa-check text-success"></i> Certified Organic<br>
+                                <i class="fas fa-check text-success"></i> Free-Range<br>
+                                <i class="fas fa-check text-success"></i> Non-GMO Feed<br>
+                                <i class="fas fa-check text-success"></i> No Antibiotics
+                            </div>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                <i class="fas fa-shopping-cart me-2"></i>Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Free-Range Eggs -->
+                <div class="col-lg-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="free-range-eggs.jpg" alt="Free-Range Eggs" class="img-fluid">
+                            <span class="badge bg-primary">Free-Range</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Fresh Free-Range Eggs</h3>
+                            <div class="product-meta">
+                                <span class="product-size">Medium</span>
+                                <span class="product-price">$5.99/dozen</span>
+                            </div>
+                            <p class="product-description">
+                                Fresh eggs from our free-range hens, raised in spacious outdoor environments with natural sunlight and fresh air.
+                            </p>
+                            <div class="product-features">
+                                <i class="fas fa-check text-success"></i> Free-Range<br>
+                                <i class="fas fa-check text-success"></i> Natural Diet<br>
+                                <i class="fas fa-check text-success"></i> No Cages<br>
+                                <i class="fas fa-check text-success"></i> Daily Collection
+                            </div>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                <i class="fas fa-shopping-cart me-2"></i>Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialty Eggs -->
+                <div class="col-lg-4 mb-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="specialty-eggs.jpg" alt="Specialty Eggs" class="img-fluid">
+                            <span class="badge bg-warning">Specialty</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Gourmet Specialty Eggs</h3>
+                            <div class="product-meta">
+                                <span class="product-size">Large</span>
+                                <span class="product-price">$8.99/dozen</span>
+                            </div>
+                            <p class="product-description">
+                                Our specialty eggs come from rare heritage breeds and are perfect for gourmet cooking and baking.
+                            </p>
+                            <div class="product-features">
+                                <i class="fas fa-check text-success"></i> Heritage Breeds<br>
+                                <i class="fas fa-check text-success"></i> Gourmet Quality<br>
+                                <i class="fas fa-check text-success"></i> Limited Edition<br>
+                                <i class="fas fa-check text-success"></i> Artisanal Production
+                            </div>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                <i class="fas fa-shopping-cart me-2"></i>Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Place Your Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <div class="mb-3">
+                            <label class="form-label">Product</label>
+                            <select class="form-select" id="productSelect">
+                                <option value="organic">Premium Organic Eggs</option>
+                                <option value="free-range">Fresh Free-Range Eggs</option>
+                                <option value="specialty">Gourmet Specialty Eggs</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Quantity</label>
+                            <input type="number" class="form-control" min="1" value="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Delivery Preference</label>
+                            <select class="form-select">
+                                <option>Farm Pickup</option>
+                                <option>Local Delivery</option>
+                                <option>National Shipping</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Delivery Date</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Special Instructions</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 mb-4">
+                        <span class="text-primary">Premium</span> Egg Production
+                    </h1>
+                    <p class="lead mb-4">
+                        Experience the finest quality eggs from our state-of-the-art farm. 
+                        Certified organic, free-range, and ethically raised.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#products" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-egg"></i> Explore Products
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-stats text-center">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="stat-card">
+                                    <i class="fas fa-chicken fa-3x text-primary"></i>
+                                    <h3>10,000+</h3>
+                                    <p>Happy Hens</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="stat-card">
+                                    <i class="fas fa-egg fa-3x text-primary"></i>
+                                    <h3>50,000+</h3>
+                                    <p>Daily Production</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="stat-card">
+                                    <i class="fas fa-certificate fa-3x text-primary"></i>
+                                    <h3>100%</h3>
+                                    <p>Organic</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="stat-card">
+                                    <i class="fas fa-award fa-3x text-primary"></i>
+                                    <h3>15+</h3>
+                                    <p>Years Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections will be added here -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us & Bulk Orders</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Bulk Order Details</label>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <select class="form-select">
+                                        <option>Number of Trays</option>
+                                        <option>10-50 Trays</option>
+                                        <option>50-100 Trays</option>
+                                        <option>100+ Trays</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select">
+                                        <option>Delivery Preference</option>
+                                        <option>Farm Pickup</option>
+                                        <option>Local Delivery</option>
+                                        <option>National Shipping</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="map-container bg-light rounded">
+                        <!-- Replace with actual Google Map embed code -->
+                        <iframe src="https://maps.google.com/maps?q=farm&output=embed" 
+                                class="w-100" 
+                                height="400" 
+                                style="border:0" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <div class="contact-info mt-4">
+                        <p>📞 +1 (555) 123-4567</p>
+                        <p>📧 orders@sunnysidefarm.com</p>
+                        <p>📍 123 Farm Road, Countryside, CT 06801</p>
+                        <p>⏰ Monday - Friday: 8:00 AM - 6:00 PM</p>
+                        <p>Saturday: 9:00 AM - 2:00 PM</p>
+                        <p>Sunday: Closed</p>
+                        
+                        <div class="social-links mt-4">
+                            <a href="#" class="social-icon me-3">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon me-3">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon me-3">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
