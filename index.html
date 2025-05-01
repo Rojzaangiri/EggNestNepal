@@ -1,279 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FreshNest Egg Poultry - Farm Fresh Eggs Delivered to Your Doorstep">
   <title>FreshNest Egg Poultry</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
-      color: #333;
-    }
-    .navbar {
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     .hero {
-      background: linear-gradient(rgba(255, 225, 130, 0.8), rgba(255, 255, 255, 0.9)),
-        url('https://images.unsplash.com/photo-1587135523365-ec5ed3e9e9c4?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1603415517564-5b08db5db01b?fit=crop&w=1200&h=800&q=80') center/cover no-repeat;
+      height: 100vh;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      color: #2d2d2d;
+      flex-direction: column;
+      text-shadow: 1px 1px 4px #000;
     }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
+    .section-padding {
+      padding: 60px 0;
     }
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-    }
-    .section {
-      padding: 60px 15px;
-    }
-    .bg-light-yellow { background-color: #fffbe6; }
-    .bg-light-green { background-color: #eafbea; }
-    .bg-light-blue { background-color: #e3f2fd; }
-    .product-card img {
+    .team-img {
+      width: 100px;
+      height: 100px;
       object-fit: cover;
-      height: 200px;
+      border-radius: 50%;
     }
-    footer {
-      background: #f1f1f1;
-      text-align: center;
-      padding: 20px;
-    }
-    /* Chatbot */
-    #chatbot-toggle {
+    .chatbot {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #fdd835;
-      color: black;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 1000;
     }
-    #chatbot-box {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      width: 300px;
-      max-height: 400px;
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      display: none;
-      flex-direction: column;
-      z-index: 1000;
+    .navbar {
+      background-color: #f8f9fa;
     }
-    #chatbot-header {
-      background: #fdd835;
-      padding: 10px;
-      font-weight: bold;
+    .testimonial {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 10px;
+    }
+    .about-box {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+    .section-title {
       text-align: center;
+      margin-bottom: 30px;
     }
-    #chatbot-body {
-      padding: 10px;
-      overflow-y: auto;
-      flex-grow: 1;
-      font-size: 14px;
-    }
-    #chatbot-input {
-      display: flex;
-      border-top: 1px solid #ccc;
-    }
-    #chatbot-input input {
-      flex: 1;
-      border: none;
-      padding: 8px;
-    }
-    #chatbot-input button {
-      background: #fdd835;
-      border: none;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-    .chat-msg { margin: 5px 0; }
-    .chat-msg.user { text-align: right; color: #0d47a1; }
-    .chat-msg.bot  { text-align: left; color: #2e7d32; }
   </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-light bg-white">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="https://i.imgur.com/2yaf2wb.png" alt="Logo" width="40" height="40" class="me-2">
-      <strong>FreshNest Egg Poultry</strong>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">FreshNest</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certification">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#infrastructure">Infrastructure</a></li>
+          <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center" id="hero">
+    <h1 class="display-3 fw-bold">FreshNest Egg Poultry</h1>
+    <p class="lead">Farm Fresh Eggs Delivered to Your Doorstep</p>
+    <a href="https://api.whatsapp.com/send?phone=9779868156268&text=Hi%20FreshNest%2C%20I%20want%20to%20order%20eggs." 
+       target="_blank" 
+       class="btn btn-warning btn-lg mt-3">
+      Order Fresh Eggs Now
     </a>
-  </div>
-</nav>
+  </section>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div>
-    <h1>Fresh, Healthy & Local Eggs</h1>
-    <p>From Happy Hens to Your Home</p>
-    <a href="#products" class="btn btn-warning">Explore Our Products</a>
-  </div>
-</section>
-
-<!-- About -->
-<section class="section bg-light-yellow text-center">
-  <div class="container">
-    <h2>About Us</h2>
-    <p class="lead">At FreshNest, we raise our hens in a clean and natural environment, free from antibiotics. Our eggs are packed daily and delivered fresh, ensuring top-quality nutrition for your family.</p>
-  </div>
-</section>
-
-<!-- Features -->
-<section class="section bg-light-green text-center">
-  <div class="container">
-    <h2>Why Choose FreshNest?</h2>
-    <div class="row mt-4">
-      <div class="col-md-4">✔ Daily Fresh Egg Supply</div>
-      <div class="col-md-4">✔ Bulk Orders for Hotels & Stores</div>
-      <div class="col-md-4">✔ Clean, Eco-Friendly Farming</div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-md-4">✔ No Antibiotics or Hormones</div>
-      <div class="col-md-4">✔ Affordable Pricing</div>
-      <div class="col-md-4">✔ Local & Reliable Delivery</div>
-    </div>
-  </div>
-</section>
-
-<!-- Products -->
-<section class="section container" id="products">
-  <h2 class="text-center">Our Products</h2>
-  <div class="row mt-4 g-4">
-    <div class="col-md-6">
-      <div class="card product-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1601050690597-bf15ec6e76aa" class="card-img-top" alt="Brown Eggs">
-        <div class="card-body text-center">
-          <h5 class="card-title">Brown Eggs</h5>
-          <p class="card-text">Rich in nutrients, naturally produced.</p>
-          <p><strong>NPR 300/dozen</strong></p>
+  <!-- Founder Section -->
+  <section id="founder" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="section-title">Meet the Founder</h2>
+      <div class="row align-items-center">
+        <div class="col-md-3 text-center">
+          <img src="https://via.placeholder.com/120?text=Rojan+Giri" alt="Rojan Giri" class="team-img mb-3">
+        </div>
+        <div class="col-md-9">
+          <h4>Rojan Giri – Founder & Farm Manager</h4>
+          <p><strong>Contact:</strong><br>
+            📧 <a href="mailto:digitalbrp@gmail.com">digitalbrp@gmail.com</a><br>
+            📘 <a href="https://www.facebook.com/bishworajpoudelofficial" target="_blank">Facebook Profile</a><br>
+            ▶️ <a href="https://youtube.com/technologychannel" target="_blank">Technology Channel on YouTube</a>
+          </p>
+          <p>Rojan founded FreshNest with a passion for sustainable agriculture and a mission to provide healthy, local eggs to communities across Nepal. His leadership and vision have made FreshNest a beacon of quality and innovation in poultry farming.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="card product-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" class="card-img-top" alt="White Eggs">
-        <div class="card-body text-center">
-          <h5 class="card-title">White Eggs</h5>
-          <p class="card-text">Farm-fresh, clean, and safe to consume.</p>
-          <p><strong>NPR 280/dozen</strong></p>
-        </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">About FreshNest</h2>
+      <div class="about-box">
+        <p>
+          FreshNest Egg Poultry is a modern poultry farm committed to delivering high-quality, hygienic, and nutrient-rich eggs from our healthy hens. Our vision is to promote responsible farming and provide traceable, reliable products to every household and business.
+        </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Team -->
-<section class="section container">
-  <h2 class="text-center mb-5">Meet Our Team</h2>
-  <div class="row g-4 justify-content-center">
-    <div class="col-md-5">
-      <div class="card border-0 shadow">
-        <img src="https://images.unsplash.com/photo-1603415526960-f9e418aa1a93?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Founder">
-        <div class="card-body text-center">
-          <h5 class="card-title">Bishworaj Poudel</h5>
-          <p class="card-text">Founder & Visionary</p>
-        </div>
-      </div>
+  <!-- Certification Section -->
+  <section id="certification" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <ul>
+        <li>Certified by National Poultry Board</li>
+        <li>Organic & Non-GMO Feed Certification</li>
+        <li>HACCP-Compliant Facility</li>
+      </ul>
     </div>
-    <div class="col-md-5">
-      <div class="card border-0 shadow">
-        <img src="https://images.unsplash.com/photo-1603415526973-22d1d7e72d6e?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Manager">
-        <div class="card-body text-center">
-          <h5 class="card-title">Sita Sharma</h5>
-          <p class="card-text">Farm Manager</p>
-        </div>
-      </div>
+  </section>
+
+  <!-- Infrastructure Section -->
+  <section id="infrastructure" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Farm Infrastructure</h2>
+      <p>We maintain a state-of-the-art poultry housing system, automated egg collection, and hygienic packing unit, ensuring biosecurity and animal welfare at every step.</p>
+      <img src="https://images.unsplash.com/photo-1606762937214-354e94c7b60e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80" class="img-fluid rounded mt-3" alt="Farm Infrastructure">
     </div>
+  </section>
+
+  <!-- Location Section -->
+  <section id="location" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="section-title">Farm Location</h2>
+      <p>Located in the lush valleys of Pokhara, Nepal, FreshNest enjoys an optimal climate for poultry farming and proximity to local distribution channels.</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.885494743672!2d83.98556691506147!3d28.209555712049446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995957a7a122f13%3A0x34f1396b50a2fa5d!2sPokhara!5e0!3m2!1sen!2snp!4v1620834064236!5m2!1sen!2snp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Chatbot -->
+  <div class="chatbot">
+    <button class="btn btn-success" onclick="alert('Hi! Ask me about our eggs, delivery, or bulk orders!')">
+      💬 Chat with us
+    </button>
   </div>
-</section>
 
-<!-- Contact -->
-<section class="section bg-light-blue text-center" id="contact">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> <a href="mailto:freshnesteggs@gmail.com">freshnesteggs@gmail.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:+9779800000000">+977-9800000000</a></p>
-    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/freshnesteggs" target="_blank">freshnesteggs</a></p>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  &copy; 2025 FreshNest Egg Poultry. All rights reserved.
-</footer>
-
-<!-- Chatbot -->
-<button id="chatbot-toggle">💬</button>
-<div id="chatbot-box">
-  <div id="chatbot-header">AI Assistant</div>
-  <div id="chatbot-body">
-    <div class="chat-msg bot">Hi! I’m your farm assistant. Ask me anything!</div>
-  </div>
-  <div id="chatbot-input">
-    <input type="text" id="user-input" placeholder="Type a question..." />
-    <button onclick="sendMessage()">➤</button>
-  </div>
-</div>
-
-<script>
-  const chatbotToggle = document.getElementById('chatbot-toggle');
-  const chatbotBox = document.getElementById('chatbot-box');
-  const chatbotBody = document.getElementById('chatbot-body');
-  const userInput = document.getElementById('user-input');
-
-  chatbotToggle.onclick = () => {
-    chatbotBox.style.display = chatbotBox.style.display === 'flex' ? 'none' : 'flex';
-  };
-
-  userInput.addEventListener("keypress", function(e) {
-    if (e.key === "Enter") sendMessage();
-  });
-
-  function sendMessage() {
-    const msg = userInput.value.trim();
-    if (!msg) return;
-    appendMessage(msg, 'user');
-    respondTo(msg.toLowerCase());
-    userInput.value = '';
-  }
-
-  function appendMessage(msg, sender) {
-    const div = document.createElement('div');
-    div.className = 'chat-msg ' + sender;
-    div.innerText = msg;
-    chatbotBody.appendChild(div);
-    chatbotBody.scrollTop = chatbotBody.scrollHeight;
-  }
-
-  function respondTo(msg) {
-    let reply = "Sorry, I didn't get that.";
-    if (msg.includes('price')) reply = "Our eggs are NPR 280–300 per dozen depending on type. Contact us for today's rate.";
-    else if (msg.includes('bulk')) reply = "Yes, we offer bulk supply for hotels, restaurants, and stores.";
-    else if (msg.includes('delivery')) reply = "We deliver locally within 24 hours. Call us for urgent orders.";
-    else if (msg.includes('contact')) reply = "Reach us at +977-9800000000 or freshnesteggs@gmail.com.";
-    else if (msg.includes('location')) reply = "We’re based in Nepal. Message us on Facebook for exact directions.";
-    setTimeout(() => appendMessage(reply, 'bot'), 600);
-  }
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
